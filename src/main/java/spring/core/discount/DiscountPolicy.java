@@ -6,8 +6,8 @@ public interface DiscountPolicy {
     /**
      * 할인 대상 금액
      * @param member
-     * @param prince
+     * @param price
      * @return
      */
-    int discount(Member member, int prince);
+    int discount(Member member, int price);
 }
