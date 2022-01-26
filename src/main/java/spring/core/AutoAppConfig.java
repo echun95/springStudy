@@ -15,7 +15,7 @@ import spring.core.member.MemoryMemberRepository;
 )
 public class AutoAppConfig {
 
-    @Bean(name = "memoryMemberRepository")
+//    @Bean(name = "memoryMemberRepository")
     MemberRepository memberRepository(){
         return new MemoryMemberRepository();
     }
