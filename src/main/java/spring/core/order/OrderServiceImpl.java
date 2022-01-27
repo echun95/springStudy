@@ -13,7 +13,6 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
@@ -27,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     //테스트 용도
-    public MemberRepository getMemberRepository(){
+    public MemberRepository getMemberRepository() {
         return memberRepository;
     }
 }
