@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Scope;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.inject.Provider;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -45,7 +46,10 @@ public class SingletonWithPrototypeTest1 {
 //        private final PrototypeBean prototypeBean; //bean 생성 시점에 주입
 
         @Autowired
-        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
+        private Provider<PrototypeBean> prototypeBeanProvider;
+
+//        @Autowired
+//        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
 //        @Autowired
 //        private ObjectFactory<PrototypeBean> prototypeBeanProvider;
 
@@ -55,7 +59,8 @@ public class SingletonWithPrototypeTest1 {
 //        }
 
         public int logic(){
-            PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
+            PrototypeBean prototypeBean = prototypeBeanProvider.get();
+//            PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
             prototypeBean.addCount();
             return prototypeBean.getCount();
         }
