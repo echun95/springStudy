@@ -54,7 +54,7 @@ public class SingletonWithPrototypeTest1 {
 //        private ObjectFactory<PrototypeBean> prototypeBeanProvider;
 
 //        @Autowired
-//        public ClientBean(PrototypeBean prototypeBean) {
+//        public ClientBean(PrototypeBean prototypeBean) {ㅔ
 //            this.prototypeBean = prototypeBean;
 //        }
 
